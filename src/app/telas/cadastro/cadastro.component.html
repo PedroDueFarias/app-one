@@ -1,0 +1,59 @@
+<form class="cadastro grid">
+  <h1 class="col-12">Cadastro</h1>
+  <div class="input-cadastro" [formGroup]="formCadastro">
+    <div class="col-12 input">
+      <label> Nome de usuário </label><br>
+      <input
+        formControlName="nome"
+        autofocus
+        pInputText
+        type="text">
+    </div>
+
+    <div class="col-12 input">
+      <label> Email </label><br>
+      <input
+        formControlName="email"
+        autofocus
+        pInputText
+        type="text">
+    </div>
+
+    <div class="col-12 input">
+      <label> Senha </label><br>
+      <input
+        formControlName="senha"
+        autofocus
+        pInputText
+        type="password">
+    </div>
+
+    <div class="col-12 input">
+      <label> Confirmação de senha </label><br>
+      <input
+        formControlName="confirmSenha"
+        autofocus
+        pInputText
+        type="password">
+    </div>
+
+    <div class="col-12 input">
+      <label> CRM </label><br>
+      <input
+        formControlName="crm"
+        autofocus
+        pInputText
+        type="number">
+    </div>
+    <div class="col-12 input">
+      <label> CPF </label><br>
+      <input
+        formControlName="cpf"
+        autofocus
+        pInputText
+        type="number">
+    </div>
+    <br>
+    <p-button (click)="cadastrar()"> Cadastrar</p-button>
+  </div>
+</form>

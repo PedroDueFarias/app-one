@@ -1,0 +1,24 @@
+<form class="login grid">
+  <h1 class="col-12">Login</h1>
+  <div class="input-login" [formGroup]="formLogin">
+    <div class="col-12 input">
+      <label> Email </label><br>
+      <input
+        formControlName="email"
+        autofocus
+        pInputText
+        type="text">
+    </div>
+
+    <div class="col-12 input">
+      <label> Senha </label><br>
+      <input
+        formControlName="senha"
+        autofocus
+        pInputText
+        type="password">
+    </div>
+    <p-button (click)="entrar()"> Entrar</p-button>
+    <p-button (click)="cadastrar()">Cadastrar</p-button>
+  </div>
+</form>
