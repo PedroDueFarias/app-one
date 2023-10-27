@@ -1,12 +1,17 @@
 .cadastro {
   display: grid;
   justify-items: center;
-  margin-top: 20%;
+  margin-top: 5%;
 
 }
 .input-cadastro {
-  margin: 5px
+  margin: 5px;
 }
 .input{
-  margin-bottom:10px
+  margin-bottom:10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }

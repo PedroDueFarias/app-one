@@ -8,7 +8,7 @@ import {CommonModule} from "@angular/common";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'cadastro',
     pathMatch: "full"
   },
 
