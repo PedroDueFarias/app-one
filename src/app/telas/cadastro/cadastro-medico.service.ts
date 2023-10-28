@@ -1,24 +1,21 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {catchError, Observable, of} from "rxjs";
+import {Medico} from "./medico";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CadastroMedicoService {
 
-  private api = 'http://127.0.0.1:5000/api/'
+  private api = 'https://5tg9hzp9-5000.brs.devtunnels.ms/cadastrar_medico'
 
   constructor(private http: HttpClient) { }
 
-  cadastro(medico: any): Observable<any> {
-    return this.http.post<any>(this.api, medico).pipe(
+  cadastro(medico: Medico): Observable<Medico> {
+    return this.http.post<Medico>(this.api, medico).pipe(
       catchError(err => {return of(err)})
     )
-  }
-  login(medico: any):Observable<any>{
-    return this.http.post<any>(this.api, medico).pipe(
-      catchError(err => {return of(err)}))
   }
 }
 

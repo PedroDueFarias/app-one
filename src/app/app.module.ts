@@ -28,7 +28,8 @@ import {HttpClientModule} from "@angular/common/http";
     InputTextModule,
     InputTextareaModule,
     ButtonModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

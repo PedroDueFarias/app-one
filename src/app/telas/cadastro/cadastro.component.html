@@ -17,7 +17,7 @@
         formControlName="cpf"
         autofocus
         pInputText
-        type="number">
+        type="text">
     </div>
 
     <div class="col-12 input">
@@ -26,17 +26,28 @@
         formControlName="crm"
         autofocus
         pInputText
-        type="number">
+        type="text">
     </div>
 
-<!--    <div class="col-12 input">-->
-<!--      <label> Email </label><br>-->
-<!--      <input-->
-<!--        formControlName="email"-->
-<!--        autofocus-->
-<!--        pInputText-->
-<!--        type="text">-->
-<!--    </div>-->
+    <div class="col-12 input">
+      <label> Celular </label><br>
+      <input
+        formControlName="celular"
+        autofocus
+        pInputText
+        placeholder="(DDD)90000-0000"
+        type="text">
+    </div>
+
+    <div class="col-12 input">
+      <label> Email </label><br>
+      <input
+        formControlName="email"
+        autofocus
+        pInputText
+        placeholder="usuario@email.com"
+        type="text">
+    </div>
 
     <div class="col-12 input">
       <label> Senha </label><br>
@@ -47,18 +58,18 @@
         type="password">
     </div>
 
-    <div class="col-12 input">
-      <label> Confirmação de senha </label><br>
-      <input
-        formControlName="confirmSenha"
-        autofocus
-        pInputText
-        type="password">
-    </div>
+<!--    <div class="col-12 input">-->
+<!--      <label> Confirmação de senha </label><br>-->
+<!--      <input-->
+<!--        formControlName="confirmSenha"-->
+<!--        autofocus-->
+<!--        pInputText-->
+<!--        type="password">-->
+<!--    </div>-->
     <br>
     <div class="buttons">
       <p-button (click)="cadastrar()"> Cadastrar</p-button>
-      <p-button (click)="login()"> Ir para login</p-button>
+<!--      <p-button (click)="login()"> Ir para login</p-button>-->
     </div>
   </div>
 </form>
