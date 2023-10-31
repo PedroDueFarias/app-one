@@ -90,5 +90,12 @@ export class CadastroComponent implements OnInit{
   redirecionaHome(){
     this.router.navigate(['home'])
   }
+
+  login(){
+    console.log(this.formCadastro.value)
+    this.router.navigate(['/', 'cadastro'])
+    console.log("Usuário redirecionado para a tela de cadastro")
+
+  }
 }
 

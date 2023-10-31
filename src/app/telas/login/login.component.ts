@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
     if (this.formLogin.status == 'INVALID') {
       console.log(this.formLogin.value)
       this.router.navigate(['/', 'cadastro'])
-      console.log("Usuário foi para a tela de cadastro")
+      console.log("Usuário redirecionado para a tela de cadastro")
     }
   }
 

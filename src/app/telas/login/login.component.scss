@@ -3,10 +3,22 @@
   justify-items: center;
   margin-top: 5%;
 
+  .input-login {
+    margin: 5px;
+
+    .input{
+      margin-bottom:10px
+    }
+
+    .buttons{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
 }
-.input-login {
-  margin: 5px
-}
-.input{
-  margin-bottom:10px
-}
+
+
+
+

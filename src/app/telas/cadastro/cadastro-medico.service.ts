@@ -8,7 +8,7 @@ import {Medico} from "./medico";
 })
 export class CadastroMedicoService {
 
-  private api = 'https://5tg9hzp9-5000.brs.devtunnels.ms/cadastrar_medico'
+  private api = 'https://5tg9hzp9-8000.brs.devtunnels.ms/api/cadastro_medico/'
 
   constructor(private http: HttpClient) { }
 
