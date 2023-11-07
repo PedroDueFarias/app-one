@@ -12,8 +12,8 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  login(medico: Medico):Observable<Medico>{
-    return this.http.post<Medico>(this.api, medico).pipe(
+  login(medico: Medico):Observable<any>{
+    return this.http.post<any>(this.api, medico).pipe(
       catchError(err => {return of(err)}))
   }
 }

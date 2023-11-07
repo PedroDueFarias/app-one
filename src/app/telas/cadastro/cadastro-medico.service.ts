@@ -16,6 +16,7 @@ export class CadastroMedicoService {
     return this.http.post<Medico>(this.api, medico).pipe(
       catchError(err => {return of(err)})
     )
+    console.log(medico)
   }
 }
 

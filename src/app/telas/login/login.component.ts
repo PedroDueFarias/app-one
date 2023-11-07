@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   entrar() {
 
-    const medico = {
+    const medico: Medico = {
       crm: this.formLogin.value.crm,
       senha: this.formLogin.value.senha
     }
@@ -38,11 +38,12 @@ export class LoginComponent implements OnInit {
       this.service.login(medico).subscribe((res) => {
           if (!res.hasOwnProperty('error')) {
             console.log('Usuário logado')
-            console.log('medico')
+            console.log(medico)
             setTimeout(()=> {
               this.redirecionaHome()}, 1000)
           }else {
             console.log('Erro no login, usuário não cadastrado')
+            console.log(medico)
           }
         }
       )

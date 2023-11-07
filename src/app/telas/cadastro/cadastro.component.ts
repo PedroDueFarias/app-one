@@ -35,8 +35,6 @@ export class CadastroComponent implements OnInit{
       ]],
       crm: ["",[
         Validators.required,
-        Validators.min(6),
-        Validators.max(6)
       ]],
       celular: ["",[
         Validators.required,
@@ -52,6 +50,9 @@ export class CadastroComponent implements OnInit{
         Validators.required,
         Validators.minLength(6)
       ]],
+      obs: ["",[
+        Validators.required
+      ]],
       // confirmSenha: ["", [Validators.required]]
     })
 
@@ -60,13 +61,14 @@ export class CadastroComponent implements OnInit{
 
   cadastrar() {
 
-    const medico: Medico = {
+    const medico: any = {
       nome: this.formCadastro.value.nome,
       cpf: this.formCadastro.value.cpf,
       crm: this.formCadastro.value.crm,
       celular: this.formCadastro.value.celular,
       email: this.formCadastro.value.email,
       senha: this.formCadastro.value.senha,
+      obs: this.formCadastro.value.obs,
     }
 
     if(this.formCadastro.status !== "INVALID") {
@@ -79,6 +81,7 @@ export class CadastroComponent implements OnInit{
           }, 1000)
         }else{
           console.log("Erro no cadastro do usuário")
+          console.log(medico)
         }
       })
     }else {

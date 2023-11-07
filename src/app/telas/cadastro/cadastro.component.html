@@ -15,7 +15,6 @@
       <label> CPF </label><br>
       <input
         formControlName="cpf"
-        autofocus
         pInputText
         type="text">
     </div>
@@ -24,7 +23,6 @@
       <label> CRM </label><br>
       <input
         formControlName="crm"
-        autofocus
         pInputText
         type="text">
     </div>
@@ -33,7 +31,6 @@
       <label> Celular </label><br>
       <input
         formControlName="celular"
-        autofocus
         pInputText
         placeholder="(DDD)90000-0000"
         type="text">
@@ -43,7 +40,6 @@
       <label> Email </label><br>
       <input
         formControlName="email"
-        autofocus
         pInputText
         placeholder="usuario@email.com"
         type="text">
@@ -53,19 +49,17 @@
       <label> Senha </label><br>
       <input
         formControlName="senha"
-        autofocus
         pInputText
         type="password">
     </div>
 
-<!--    <div class="col-12 input">-->
-<!--      <label> Confirmação de senha </label><br>-->
-<!--      <input-->
-<!--        formControlName="confirmSenha"-->
-<!--        autofocus-->
-<!--        pInputText-->
-<!--        type="password">-->
-<!--    </div>-->
+    <div class="col-12 input">
+      <label> Observação </label><br>
+      <input
+        formControlName="obs"
+        pInputText
+        type="text">
+    </div>
     <br>
     <div class="buttons">
       <p-button (click)="cadastrar()"> Cadastrar</p-button>
