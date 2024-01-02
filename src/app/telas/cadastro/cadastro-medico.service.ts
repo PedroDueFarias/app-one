@@ -19,4 +19,3 @@ export class CadastroMedicoService {
     console.log(medico)
   }
 }
-

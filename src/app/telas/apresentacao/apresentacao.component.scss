@@ -1,6 +1,28 @@
-.apresentacao {
-  display: grid;
+.container {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
   justify-items: center;
+  flex-direction: column;
+  margin: 0;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-style: groove;
+    height: 10vh;
+
+    .buttons-title {
+      display: flex;
+      justify-content: flex-end;
+
+      .bt-cadastrar {
+        margin-right: 5px;
+      }
+
+    }
+  }
 
   .body {
     width: 90%;

@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {CadastroMedicoService} from "./cadastro-medico.service";
 import {Medico} from "./medico";
 
+
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -11,8 +12,9 @@ import {Medico} from "./medico";
 })
 export class CadastroComponent implements OnInit{
 
-  formCadastro: FormGroup = this.fb.group({})
-  medico: Medico | undefined
+  formCadastroMedico: FormGroup = this.fb.group({})
+  // medico: Medico | undefined
+
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -22,7 +24,7 @@ export class CadastroComponent implements OnInit{
   ) {
   }
   ngOnInit(): void {
-    this.formCadastro = this.fb.group({
+    this.formCadastroMedico = this.fb.group({
       nome: ["",[
         Validators.required,
         Validators.maxLength(60),
@@ -41,11 +43,16 @@ export class CadastroComponent implements OnInit{
         Validators.maxLength(11),
         Validators.minLength(11),
       ]],
+      sexo: ["", [
+        Validators.required
+      ]],
+      nascimento: ["",[
+        Validators.required
+      ]],
       email: ["",[
         Validators.required,
         Validators.email,
       ]],
-      // email: ["", Validators.required],
       senha: ["",[
         Validators.required,
         Validators.minLength(6)
@@ -53,25 +60,46 @@ export class CadastroComponent implements OnInit{
       obs: ["",[
         Validators.required
       ]],
-      // confirmSenha: ["", [Validators.required]]
+      confirmSenha: ["", [
+        Validators.required
+      ]],
+      cep: ["",[
+        Validators.required
+      ]],
+      estado: ["",[
+        Validators.required
+      ]],
+      endereco: ["",[
+        Validators.required
+      ]],
     })
 
-    console.log(this.formCadastro.value)
+    console.log(this.formCadastroMedico.value)
   }
 
   cadastrar() {
 
-    const medico: any = {
-      nome: this.formCadastro.value.nome,
-      cpf: this.formCadastro.value.cpf,
-      crm: this.formCadastro.value.crm,
-      celular: this.formCadastro.value.celular,
-      email: this.formCadastro.value.email,
-      senha: this.formCadastro.value.senha,
-      obs: this.formCadastro.value.obs,
-    }
+    const medico: Medico = {
+      nome: this.formCadastroMedico.value.nome,
+      cpf: this.formCadastroMedico.value.cpf,
+      crm: this.formCadastroMedico.value.crm,
+      celular: this.formCadastroMedico.value.celular,
+      sexo: this.formCadastroMedico.value.sexo,
+      email: this.formCadastroMedico.value.email,
+      senha: this.formCadastroMedico.value.senha,
+      confirmeSenha: this.formCadastroMedico.value.confirmSenha,
+      obs: this.formCadastroMedico.value.obs,
+      cep: this.formCadastroMedico.value.cep,
+      estado: this.formCadastroMedico.value.estado,
+      endereco: this.formCadastroMedico.value.endereco,
+  }
 
-    if(this.formCadastro.status !== "INVALID") {
+    //AJEITAR LÓGICA DE CONFIRMAÇÃO DE SENHA
+    // if(medico.confirmeSenha.value !== medico.senha.value){
+    //   this.formCadastro.invalid
+    // }
+
+    if(this.formCadastroMedico.status !== "INVALID") {
       this.service.cadastro(medico).subscribe((res) => {
         if(!res.hasOwnProperty('error')){
           console.log("Usuário cadastrado")
@@ -95,8 +123,8 @@ export class CadastroComponent implements OnInit{
   }
 
   login(){
-    console.log(this.formCadastro.value)
-    this.router.navigate(['/', 'cadastro'])
+    console.log(this.formCadastroMedico.value)
+    this.router.navigate(['/', 'login'])
     console.log("Usuário redirecionado para a tela de cadastro")
 
   }

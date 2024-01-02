@@ -1,69 +1,146 @@
-<form class="cadastro grid">
-  <h1 class="col-12">Cadastro</h1>
-  <div class="input-cadastro" [formGroup]="formCadastro">
+<div class="container">
+  <div class="content grid">
 
-    <div class="col-12 input">
-      <label> Nome de usuário </label><br>
-      <input
-        formControlName="nome"
-        autofocus
-        pInputText
-        type="text">
-    </div>
+    <header class="title col-12">
+      <h1>PLAGOS</h1>
+      <div class="bt-header">
+        <p-button (click)="login()"> Entrar</p-button>
+      </div>
+    </header>
 
-    <div class="col-12 input">
-      <label> CPF </label><br>
-      <input
-        formControlName="cpf"
-        pInputText
-        type="text">
-    </div>
+    <menu class="menu col-2">
+      <p>menu</p>
+    </menu>
 
-    <div class="col-12 input">
-      <label> CRM </label><br>
-      <input
-        formControlName="crm"
-        pInputText
-        type="text">
-    </div>
+    <form class="cadastro col-10">
 
-    <div class="col-12 input">
-      <label> Celular </label><br>
-      <input
-        formControlName="celular"
-        pInputText
-        placeholder="(DDD)90000-0000"
-        type="text">
-    </div>
+      <h2 class="titulo-form">Cadastro médico</h2>
 
-    <div class="col-12 input">
-      <label> Email </label><br>
-      <input
-        formControlName="email"
-        pInputText
-        placeholder="usuario@email.com"
-        type="text">
-    </div>
+      <div class="input-cadastro grid" [formGroup]="formCadastroMedico">
+        <div class="col-8 input">
+          <label> Nome de usuário </label><br>
+          <input
+            formControlName="nome"
+            autofocus
+            pInputText
+            class="input-nome"
+            type="text">
+        </div>
 
-    <div class="col-12 input">
-      <label> Senha </label><br>
-      <input
-        formControlName="senha"
-        pInputText
-        type="password">
-    </div>
+        <div class="col-4 input">
+          <label> CRM </label><br>
+          <input
+            formControlName="crm"
+            pInputText
+            class="input-crm"
+            type="text">
+        </div>
 
-    <div class="col-12 input">
-      <label> Observação </label><br>
-      <input
-        formControlName="obs"
-        pInputText
-        type="text">
-    </div>
-    <br>
-    <div class="buttons">
-      <p-button (click)="cadastrar()"> Cadastrar</p-button>
-      <p-button (click)="login()"> Ir para login</p-button>
-    </div>
+        <div class="col input">
+          <label> CPF </label><br>
+          <input
+            formControlName="cpf"
+            pInputText
+            class="input-cpf"
+            type="text">
+        </div>
+
+        <div class="col input">
+          <label> Celular </label><br>
+          <input
+            formControlName="celular"
+            pInputText
+            class="input-celular"
+            placeholder="(DDD)90000-0000"
+            type="text">
+        </div>
+
+        <div class="col input">
+          <label> Sexo </label><br>
+          <input
+            formControlName="sexo"
+            pInputText
+            class="input-sexo"
+            type="text">
+        </div>
+
+        <div class="col input">
+          <label> Data de nascimento </label><br>
+          <input
+            formControlName="nascimento"
+            pInputText
+            class="input-nascimento"
+            placeholder="dd/mm/aaaa"
+            type="text">
+        </div>
+
+        <div class="col input">
+          <label> Email </label><br>
+          <input
+            formControlName="email"
+            pInputText
+            class="input-email"
+            placeholder="usuario@email.com"
+            type="text">
+        </div>
+
+        <div class="col input">
+          <label> Senha </label><br>
+          <input
+            formControlName="senha"
+            pInputText
+            class="input-senha"
+            type="password">
+        </div>
+        <div class="col input">
+          <label> Confirme sua senha </label><br>
+          <input
+            formControlName="confirmeSenha"
+            pInputText
+            class="input-confirmeSenha"
+            type="password">
+        </div>
+
+        <div class="col input">
+          <label> Observação </label><br>
+          <input
+            formControlName="obs"
+            pInputText
+            class="input-observacao"
+            type="text">
+        </div>
+
+        <div class="col input">
+          <label> CEP </label><br>
+          <input
+            formControlName="cep"
+            pInputText
+            class="input-cep"
+            type="text">
+        </div>
+
+        <div class="col input">
+          <label> Estado </label><br>
+          <input
+            formControlName="estado"
+            pInputText
+            class="input-estado"
+            type="text">
+        </div>
+
+        <div class="col input">
+          <label> Endereço </label><br>
+          <input
+            formControlName="endereco"
+            pInputText
+            class="input-endereco"
+            type="text">
+        </div>
+      </div>
+      <div class="buttons">
+        <p-button class="bt" (click)="cadastrar()"> Cadastrar</p-button>
+      </div>
+    </form>
   </div>
-</form>
+</div>
+
